@@ -10,7 +10,6 @@ type CurrentMonthClicks = {
 export async function getCurrentMonthClicks(
   linkId: string
 ): Promise<CurrentMonthClicks> {
-  'use cache';
   const now = new Date();
   const currentMonthIndex = now.getMonth();
   const currentMonthName = now.toLocaleString('default', { month: 'long' });
@@ -42,7 +41,6 @@ type DailyClicks = {
 export async function getDailyClicksForCurrentMonth(
   linkId: string
 ): Promise<DailyClicks[]> {
-  'use cache';
   const now = new Date();
   const year = now.getFullYear();
   const month = now.getMonth();
