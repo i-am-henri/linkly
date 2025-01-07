@@ -1,0 +1,18 @@
+---
+title: "The codebase"
+summary: "Next.js, Tailwind and Postgres are the fundamental parts of this codebase."
+date: 2020-01-01
+---
+
+I (henri) created this project in a very short period of time (only 3 days or smthg like that). I used the tech I am most familiar with, Next.js, Tailwindcss, Postgres, Prisma. In short: the vercel stack I guess.
+
+## How to selfhost
+
+Selfhosting is easy - you can host this app normal, without special requirements. You can use for the database [Neon](https://neon.tech), any other postgres database provider, or a local database. You only have to set the connection string as `DATABASE_URL` in the .env file and you have to push the prisma schema with the command `bunx prisma db push`. You can then host the app on your own VPS, or on [vercel](https://vercel.com).
+
+## Configuration
+
+Env variables:
+- DATABASE_URL: connection string of your db
+- LIMIT: a number of the maximum of links which are allowed to created (leaf this field out, if you don't want to set a limit)
+- URL: the domain of your site, so that you can copy the short link (please with protocol)
