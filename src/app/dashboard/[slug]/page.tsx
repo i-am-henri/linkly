@@ -10,7 +10,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
-import { DailyClicksChart } from './chart';
 
 export default async function Dashboard({
   params,
@@ -114,9 +113,9 @@ async function Data({
         <h2 className="text-lg font-medium">
           Current month: <Count number={monthlyClicks.clicks} /> clicks
         </h2>
-        <Suspense fallback={<div>Loading...</div>}>
+        {/* <Suspense fallback={<div>Loading...</div>}>
           <DailyClicksChart data={dailyClicks} />
-        </Suspense>
+        </Suspense> */}
       </div>
     </>
   );
