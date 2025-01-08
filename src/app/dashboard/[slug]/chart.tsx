@@ -23,7 +23,7 @@ export function DailyClicksChart({
       {isClient && (
         <AreaChart
           className="w-full outline-0 focus-within:outline-none focus:outline-none"
-          style={'outline-width: 0px'}
+          style={{ outlineWidth: '0px' }}
           width={500}
           height={300}
           accessibilityLayer
